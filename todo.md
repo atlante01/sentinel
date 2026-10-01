@@ -1,1 +1,2 @@
 -- Add comments to functions
+-- Add translation support (fr, ru, es, de, it, en)
