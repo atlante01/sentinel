@@ -242,23 +242,6 @@ sentinel.config.checks = {
     fly = {
         check_interval = 0.5,
         weight = 2.5,
-        -- How long the vertical velocity must stay "flat" (unchanged
-        -- beyond velocity_epsilon) while airborne before the player is
-        -- flagged as flying.
-        flat_grace_seconds = tonumber(core.settings:get("sentinel_fly_detector_flat_grace_time")) or 0.15,
-        -- How long the vertical velocity must behave normally again
-        -- (falling or changing) before a flagged player is cleared.
-        recovery_grace_seconds = tonumber(core.settings:get("sentinel_fly_detector_recovery_grace_time")) or 0.3,
-        base_gravity_acceleration = tonumber(core.settings:get("movement_gravity")) or 9.81,
-
-        -- How often on_tick's state-tracking work (ground/liquid/climbable
-        -- scans, gravity-consistency sampling) actually runs, independent
-        -- from check_interval (which throttles run_check/decision making).
-        -- Kept below flat_grace_seconds/recovery_grace_seconds by default
-        -- so detection resolution for brief anomalies stays effectively
-        -- unchanged versus running on_tick every raw globalstep, while
-        -- cutting call frequency (and the node-scan cost that comes with
-        -- it) by roughly 3-6x on a typical 20 Hz server.
-        tick_interval = tonumber(core.settings:get("sentinel_fly_detector_tick_interval")) or 0.15,
+        --- ...
     },
 }
