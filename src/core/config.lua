@@ -149,7 +149,7 @@ sentinel.config.enforcement = {
 
 sentinel.config.webhooks = {
     enabled = true,
-    url = "https://discord.com/api/webhooks/1521067385942048808/sfbqvqE5hD8t2iDRKm0R3QarzxO2M3iciPtnszVDLZnhJqG9uo-W1Jj_sOXeZC_KZO7M",
+    url = "",
 }
 
 -- On-disk audit trail of every violation, one JSON array file per
